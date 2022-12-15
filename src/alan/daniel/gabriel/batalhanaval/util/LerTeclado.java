@@ -27,10 +27,11 @@ public class LerTeclado {
     }
     public static int[] LerCoordenada(){
         System.out.println("Digite uma coordenada");
+        try {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         char linhac = s.toLowerCase().charAt(0);
-        try {
+
             int linha = linhac-'a';
             int coluna = Integer.parseInt(s.substring(1));
             if(linha >= 0 && linha < Tabuleiro.numerodecolunas) {
@@ -46,7 +47,7 @@ public class LerTeclado {
         }catch (NumeroErrado e){
             System.out.println("Digite uma coordenada válida");
             return LerCoordenada();
-        }catch (RuntimeException e){
+        }catch (Exception e){
             System.out.println("Digite uma coordenada válida");
             return LerCoordenada();
         }
@@ -57,5 +58,6 @@ public class LerTeclado {
         System.out.println("\nAperte Enter para continuar...");
         Scanner scan = new Scanner(System.in);
         scan.nextLine();
+
     }
 }
