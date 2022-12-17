@@ -35,7 +35,7 @@ public class BatalhaNaval {
                 TabuleiroCpu = Jogada(TabuleiroCpu, TabuleiroJogador);
                 jogador = TabuleiroJogador.jogador;
             }
-            //LerTeclado.pausa();
+            LerTeclado.pausa();
             termino = Termino(TabuleiroJogador.tabuleiro,TabuleiroCpu.tabuleiro);
             } while (termino==0);
         System.out.println("\n\n---------------------------------------------");
